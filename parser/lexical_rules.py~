@@ -1,7 +1,7 @@
 import string
 
-RESERVED_WORDS = ["if", "while", "def", "return"]
-ONECHARSYMBOLS = ["+", "=", "-", ","]
+RESERVED_WORDS = ["if", "endif", "while", "endwhile", "def", "return"]
+ONECHARSYMBOLS = ["+", "=", "-", ">", ",","<"]
 COMPARATORS = [">", "<"]
 OPERATORS = ["+", "-"]
 DELIMITER_SYMBOLS = ["(", ")", "{", "}", ";"]
@@ -11,7 +11,7 @@ IDENTIFIER_STARTCHARS = string.letters
 IDENTIFIER_CHARS = string.letters + string.digits
 
 #characters that compose a number
-NUMBER_STARTCHARS = string.digits + "-"
+NUMBER_STARTCHARS = string.digits +
 NUMBER_CHARS = string.digits
 
 # wihte spaces
@@ -25,4 +25,3 @@ NUMBER = "NUMBER"
 WHITESPACE = "WHITESPACE"
 DELIMITER = "DELIMITER"
 RESERVED = "RESERVED"
-COMPARATOR = "COMPARATOR"

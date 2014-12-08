@@ -26,7 +26,7 @@ class Parser:
 		if self.expression():
 			self.pos += 1
 			self.getToken().text
-			if self.getToken().text in COMPARATORS:
+			if self.getToken().type == COMPARATOR:
 				self.pos += 1
 				if self.expression():
 					return True
@@ -59,7 +59,7 @@ class Parser:
 		return False
 
 	def expression(self):
-		if self.getToken().type == IDENTIFIER or self.getToken().type == NUMBER:
+		if self.functionCall() or self.getToken().type == IDENTIFIER or self.getToken().type == NUMBER:
 			return True
 		return False
 

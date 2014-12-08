@@ -1,22 +1,16 @@
-
-def cacilda(porpeta) {
-maria (identifier123);
-dasd = 10;
-var2 = 3 + 5;
-
-while(thing < afwer) {
-	if (cakaka < 0293) {
-	batata=31;
-	aas(s,s,s,5346);
-	}
-
-function(var1, x, v4);}
+def soma(var1, var2) {
+result = var1 + var2;
+return result;
 }
-returns( bithhsasf , add);
-while(thing < afwer) {
-	if (cakaka < 0293) {
-	batata=31;
-	aas(s,s,s,5346);
+def multiplicacao(x, y){
+result = 0;
+while(y > 0) {
+	result = result + x;
+	y = y - 1;
 	}
-
-function(var1, x, v4);}
+return result;
+}
+y = multipliCSDAcacao(3,2);
+x = soma(y,4);
+print(x);
+soma(1, x);

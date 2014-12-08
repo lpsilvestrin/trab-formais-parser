@@ -25,6 +25,12 @@ class Lexer:
 			token = Token("eof")
 			token.type = "EOF"
 
+		# getting comparator tokens
+		elif self.char in COMPARATORS:
+			token = Token(self.char)
+			token.type = "COMPARATOR"
+			self.char = self.scanner.getChar()
+
 		# getting one-character tokens
 		elif self.char in ONECHARSYMBOLS:
 			token = Token(self.char)
@@ -32,7 +38,7 @@ class Lexer:
 			self.char = self.scanner.getChar()
 
 		# getting number tokens
-		elif self.char in NUMBER_CHARS:
+		elif self.char in NUMBER_STARTCHARS:
 			while self.char in NUMBER_CHARS:
 				word = word + self.char
 				self.char = self.scanner.getChar()

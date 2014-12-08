@@ -7,5 +7,6 @@ class Scanner:
 
 	def getChar(self):
 		return self.file.read(1)
+		
 	def goBack(self):
 		self.file.seek(-1, 1)
